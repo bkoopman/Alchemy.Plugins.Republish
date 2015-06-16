@@ -32,7 +32,7 @@ Alchemy.command("${PluginName}", "UnPublish", {
     /**
      * Executes your command. You can use _execute or execute as the property name.
      */
-    execute: function () {
+    execute: function (selection) {
         var p = this.properties;
 
         // there must be at least one item selected
