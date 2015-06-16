@@ -1,0 +1,25 @@
+﻿/**
+ * Example of how to use tokens to resolve url's to resources in your plugin.
+ * ${ImgUrl}
+ * ${CssUrl}
+ * ${JsUrl}
+ * ...
+ */
+
+#cm_pq_publish.item .image
+{
+    /* 2013 SP1 icons */
+    background-image: url({ThemePath['CME']}/Sprites/cme_Sprites.16px_v7.1.0.66.1_.png);
+    background-position: 0 -624px;
+    height: 16px;
+    width: 16px;
+}
+
+#cm_pq_unpublish.item .image
+{
+    /* 2013 SP1 icons */
+    background-image: url({ThemePath['CME']}/Sprites/cme_Sprites.16px_v7.1.0.66.1_.png);
+    background-position: 0 -640px;
+    height: 16px;
+    width: 16px;
+}

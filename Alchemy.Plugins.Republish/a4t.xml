@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.alchemywebstore.com/">
+  <buildTime>2015-06-16T13:12:56.8348968+02:00</buildTime>
+  <id>558000f0e4de02112cba0216</id>
+  <description><![CDATA[Publish from Publishing Queue plugin.]]></description>
+  <name>Republish</name>
+  <version>1.0.0.0</version>
+  <versionId>558000f0e4de02112cba0215</versionId>
+</plugin>
