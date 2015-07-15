@@ -15,16 +15,16 @@ namespace Alchemy.Plugins.Republish.Config
         public RepublishResourceGroup()
         {
             // When adding files you only need to specify the filename and not full path
-            this.AddFile("PublishCommand.js");
-            this.AddFile("UnPublishCommand.js");
-            this.AddFile("Republish.css");
+            AddFile("PublishCommand.js");
+            AddFile("UnPublishCommand.js");
+            AddFile("Republish.css");
 
             // When referencing commandsets you can just use the generic AddFile with your CommandSet as the type.
             // Note that below is just a convenient way of doing the following:
             //   this.AddFile(FileTypes.Reference, "Alchemy.Plugins.HelloWorld.Commands.HelloCommandSet");
-            this.AddFile<RepublishCommandSet>();
+            AddFile<RepublishCommandSet>();
 
-            this.Dependencies.AddAlchemyCore();
+            Dependencies.AddAlchemyCore();
         }
     }
 }

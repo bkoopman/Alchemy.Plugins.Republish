@@ -20,8 +20,8 @@ namespace Alchemy.Plugins.Republish.Config
         /// </summary>
         public RepublishCommandSet()
         {
-            this.AddCommand("Publish");
-            this.AddCommand("UnPublish");
+            AddCommand("Publish");
+            AddCommand("UnPublish");
         }
     }
 }

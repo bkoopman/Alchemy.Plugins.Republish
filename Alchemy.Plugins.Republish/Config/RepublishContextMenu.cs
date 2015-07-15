@@ -13,24 +13,24 @@ namespace Alchemy.Plugins.Republish.Config
         public RepublishContextMenu()
         {
             // This is the id which gets put on the html element for this menu (to target with css/js).
-            this.AssignId = "RepublishContextMenu"; 
+            AssignId = "RepublishContextMenu"; 
 
             // The name of the extension menu
-            this.Name = "RepublishContextMenu";
+            Name = "RepublishContextMenu";
 
             // Where to add the new menu in the current context menu.
-            this.InsertBefore = "cm_sep_0";
+            InsertBefore = "cm_sep_0";
 
-            this.AddSeparator("cm_pq_sep_0");
-            this.AddSubMenu("cm_pq_pub", "{Resources: Tridion.Web.UI.Strings, Publishing}")
+            AddSeparator("cm_pq_sep_0");
+            AddSubMenu("cm_pq_pub", "{Resources: Tridion.Web.UI.Strings, Publishing}")
                 .AddItem("cm_pq_publish", "{Resources: Tridion.Web.UI.Strings, Publish}", "Publish")
                 .AddItem("cm_pq_unpublish", "{Resources: Tridion.Web.UI.Strings, UnPublish}", "UnPublish");
 
             // We need to addd our resource group as a dependency to this extension
-            this.Dependencies.Add<RepublishResourceGroup>();
+            Dependencies.Add<RepublishResourceGroup>();
 
             // Actually apply our extension to a particular view.  You can have multiple.
-            this.Apply.ToView("*", "PublishQueueContextMenu");
+            Apply.ToView("*", "PublishQueueContextMenu");
         }
     }
 }
