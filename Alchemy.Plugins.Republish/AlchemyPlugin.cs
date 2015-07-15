@@ -11,6 +11,14 @@ namespace Alchemy.Plugins.Republish
     /// </remarks>
     public class AlchemyPlugin : AlchemyPluginBase
     {
-
+        /// <summary>
+        /// Optional override of Configure method if you want to add your own plugin utilities
+        /// or to set custom options on existing ones.
+        /// </summary>
+        /// <param name="services">The strongly typed services.</param>
+        public override void Configure(IPluginServiceLocator services)
+        {
+            services.SettingsEncryptor.EncryptionKey = "MyCustomKey";
+        }
     }
 }

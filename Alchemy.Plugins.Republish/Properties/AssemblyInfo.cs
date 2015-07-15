@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Alchemy.Plugins.Republish")]
 [assembly: AssemblyDescription("Publish from Publishing Queue Alchemy4Tridion plugin project.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("SDL")]
+[assembly: AssemblyCompany("SDL Web Community")]
 [assembly: AssemblyProduct("Alchemy.Plugins.Republish")]
-[assembly: AssemblyCopyright("Copyright SDL © 2015")]
+[assembly: AssemblyCopyright("Copyright SDL Web Community © 2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.0.1")]
+[assembly: AssemblyFileVersion("1.0.0.1")]
