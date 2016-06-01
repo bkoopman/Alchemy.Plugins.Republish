@@ -5,6 +5,6 @@
   <description><![CDATA[This plugin enables you to republish (and unpublish) items directly from the Publishing Queue.]]></description>
   <version>1.0.0.3</version>
   <references />
-  <versionId>558000f0e4de02112cba0215</versionId>
+  <versionId>574eaf91e4de03184c35f760</versionId>
   <frameworkVersion>0.8.1.0</frameworkVersion>
 </plugin>
