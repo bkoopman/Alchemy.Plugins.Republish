@@ -1,8 +1,10 @@
 <?xml version="1.0"?>
-<plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.alchemywebstore.com/">
+<plugin xmlns:c="https://www.alchemywebstore.com/configuration/definitions" xmlns="http://www.alchemywebstore.com/">
   <id>558000f0e4de02112cba0216</id>
-  <description><![CDATA[This plugin enables you to republish (and unpublish) items directly from the Publishing Queue.]]></description>
   <name>Republish</name>
-  <version>1.0.0.2</version>
+  <description><![CDATA[This plugin enables you to republish (and unpublish) items directly from the Publishing Queue.]]></description>
+  <version>1.0.0.3</version>
+  <references />
   <versionId>558000f0e4de02112cba0215</versionId>
+  <frameworkVersion>0.8.1.0</frameworkVersion>
 </plugin>

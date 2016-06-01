@@ -22,9 +22,9 @@ namespace Alchemy.Plugins.Republish.Config
             InsertBefore = "cm_sep_0";
 
             AddSeparator("cm_pq_sep_0");
-            AddSubMenu("cm_pq_pub", "{Resources: Tridion.Web.UI.Strings, Publishing}")
-                .AddItem("cm_pq_publish", "{Resources: Tridion.Web.UI.Strings, Publish}", "Publish")
-                .AddItem("cm_pq_unpublish", "{Resources: Tridion.Web.UI.Strings, UnPublish}", "UnPublish");
+            AddSubMenu("cm_pq_pub", "Publishing")
+                .AddItem("cm_pq_publish", "Publish", "Publish")
+                .AddItem("cm_pq_unpublish", "UnPublish", "UnPublish");
 
             // We need to addd our resource group as a dependency to this extension
             Dependencies.Add<RepublishResourceGroup>();
