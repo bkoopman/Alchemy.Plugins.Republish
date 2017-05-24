@@ -1,8 +1,10 @@
 ﻿#cm_pq_publish.item .image {
     background-image: url('${ImgUrl}publish.16px.png');
+    background-position: 0;
 }
 
 #cm_pq_unpublish.item .image
 {
     background-image: url('${ImgUrl}unpublish.16px.png');
+    background-position: 0;
 }

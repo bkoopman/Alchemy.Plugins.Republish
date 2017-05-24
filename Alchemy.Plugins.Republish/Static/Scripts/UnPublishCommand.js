@@ -113,7 +113,7 @@ Alchemy.command("${PluginName}", "UnPublish", {
                 p.popup.dispose();
                 p.popup = null;
             }
-            $messages.registerNotification($localization.getEditorResource("PublishPopupItemsSentToPublishQueue").format(total));
+            $messages.registerNotification($localization.getEditorResource("PublishPopupItemsSentToPublishQueue").format(total ? total.length : 0));
         };
 
         function onMultiUnpublish$OnSendToQueueFailed() {
@@ -121,12 +121,22 @@ Alchemy.command("${PluginName}", "UnPublish", {
             $messages.registerError($localization.getEditorResource("PublishPopupItemsSentToPublishQueueFailed"));
         };
 
-        tridion.Web.UI.ContentManager.Publishing.UnpublishItems(
-            items,
-            instruction,
-            onMultiUnpublish$OnSendToQueue,
-            onMultiUnpublish$OnSendToQueueFailed
-        );
+        // 2013 & web 8 support
+        if (typeof tridion.Web.UI.ContentManager.Publishing === "function") {
+            tridion.Web.UI.ContentManager.Publishing.UnpublishItems(
+                items,
+                instruction,
+                onMultiUnpublish$OnSendToQueue,
+                onMultiUnpublish$OnSendToQueueFailed
+            );
+        } else {
+            tridion.Web.UI.Models.TCM.Publishing.UnpublishItems(
+                items,
+                instruction,
+                onMultiUnpublish$OnSendToQueue,
+                onMultiUnpublish$OnSendToQueueFailed
+            );
+        }
     }
     
 });

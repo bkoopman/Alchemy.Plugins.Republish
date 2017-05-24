@@ -75,7 +75,7 @@ Alchemy.command("${PluginName}", "Publish", {
                 p.popup.dispose();
                 p.popup = null;
             }
-            $messages.registerNotification($localization.getEditorResource("PublishPopupItemsSentToPublishQueue").format(total));
+            $messages.registerNotification($localization.getEditorResource("PublishPopupItemsSentToPublishQueue").format(total ? total.length : 0));
         };
 
         function onMultiPublish$OnSendToQueueFailed(error) {
@@ -83,12 +83,22 @@ Alchemy.command("${PluginName}", "Publish", {
             $messages.registerError(error.Message, null, null, true, false);
         };
 
-        tridion.Web.UI.ContentManager.Publishing.PublishItems(
-            items,
-            instruction,
-            onMultiPublish$OnSendToQueue,
-            onMultiPublish$OnSendToQueueFailed
-        );        
+        // 2013 & web 8 support
+        if (typeof tridion.Web.UI.ContentManager.Publishing === "function") {
+            tridion.Web.UI.ContentManager.Publishing.PublishItems(
+                items,
+                instruction,
+                onMultiPublish$OnSendToQueue,
+                onMultiPublish$OnSendToQueueFailed
+            );
+        } else {
+            tridion.Web.UI.Models.TCM.Publishing.PublishItems(
+                items,
+                instruction,
+                onMultiPublish$OnSendToQueue,
+                onMultiPublish$OnSendToQueueFailed
+            );
+        }            
     },
 
     openPublishPopup: function(items) {
@@ -99,7 +109,8 @@ Alchemy.command("${PluginName}", "Publish", {
 
         for (var i = 0, cnt = items.length; i < cnt; i++) {
             var type = $models.getItemType(items[i]);
-            if (type == $const.ItemType.PUBLICATION || type == $const.ItemType.STRUCTURE_GROUP) {
+            // include Bundles, which are of item type "Virtual Folder"
+            if (type == $const.ItemType.PUBLICATION || type == $const.ItemType.STRUCTURE_GROUP || type == $const.ItemType.PAGE_TEMPLATE || type == $const.ItemType.COMPONENT_TEMPLATE || type == $const.ItemType.VIRTUAL_FOLDER) {
                 doRepublish = true;
                 break;
             }

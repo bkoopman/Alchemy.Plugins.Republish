@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
 <plugin xmlns:c="https://www.alchemywebstore.com/configuration/definitions" xmlns="http://www.alchemywebstore.com/">
+  <author>Bart Koopman</author>
+  <authorId>557ff7ebe4de02112cba01c9</authorId>
+  <authorType>Individual</authorType>
   <id>558000f0e4de02112cba0216</id>
   <name>Republish</name>
   <description><![CDATA[This plugin enables you to republish (and unpublish) items directly from the Publishing Queue.]]></description>
-  <version>1.0.0.3</version>
+  <version>1.0.0.4</version>
   <references />
-  <versionId>574eaf91e4de03184c35f760</versionId>
-  <frameworkVersion>0.8.1.0</frameworkVersion>
+  <versionId>59258963e4de0214dc03a9e4</versionId>
+  <frameworkVersion>0.8.3.0</frameworkVersion>
 </plugin>
